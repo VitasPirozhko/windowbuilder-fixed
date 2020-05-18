@@ -88,7 +88,7 @@ class AppRoot extends Component {
       idle,
       disable: ['google'],
     };
-
+    
     return [
 
       <Header key="header" items={items} {...props} />,

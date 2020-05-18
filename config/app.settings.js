@@ -30,8 +30,8 @@ module.exports = function settings(prm = {}) {
     }],
 
     // расположение couchdb для сайта
-    couch_path: process.env.COUCHPATH || "/couchdb/wb_",
-    //couch_path: "https://light.oknosoft.ru/couchdb/wb_",
+    //couch_path: process.env.COUCHPATH || "/couchdb/wb_",
+    couch_path: "https://light.oknosoft.ru/couchdb/wb_",
     //couch_path: 'http://cou200:5984/wb_',
 
     // расположение couchdb для nodejs

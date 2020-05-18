@@ -14,7 +14,7 @@ import {metaActions, metaMiddleware} from 'metadata-redux';
 import {customPouchMiddleware} from '../redux/reducers/pouchdb';
 
 // читаем скрипт инициализации метаданных, полученный в результате выполнения meta:prebuild
-import meta_init from 'windowbuilder/dist/init';
+import meta_init from '../../windowbuilder-addictions/windowbuilder-core/dist/init';
 import modifiers from './modifiers';
 import proxy_login, {load_ram, load_common} from 'metadata-superlogin/proxy';
 
@@ -76,20 +76,20 @@ export function init(store) {
     }
 
     // читаем paperjs и deep-diff
-    $p.load_script('/dist/paperjs-deep-diff.min.js', 'script')
+    $p.load_script('./dist/paperjs-deep-diff.min.js', 'script')
 
       // читаем базовый скрипт рисовалки
-      .then(() => import('windowbuilder/dist/drawer'))
+      .then(() => import('../../windowbuilder-addictions/windowbuilder-core/dist/drawer'))
 
       .then((module) => {
         module.default({$p, paper});
       })
 
       // читаем дополнительный скрипт рисовалки
-      .then(() => $p.load_script('/dist/windowbuilder.js', 'script'))
+      .then(() => $p.load_script('./dist/windowbuilder.js', 'script'))
 
       // читаем скрипт расчетной части построителя
-      .then(() => $p.load_script('/dist/wnd_debug.js', 'script'))
+      .then(() => $p.load_script('./dist/wnd_debug.js', 'script'))
 
       // читаем скрипты модификаторов DataObj`s и DataManager`s
       .then(() => {

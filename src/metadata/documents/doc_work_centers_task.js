@@ -187,7 +187,7 @@ export default function ({
      * @return {Promise<void>}
      */
     optimize(opts) {
-      return import('genetic-cutting')
+      return import('../../../windowbuilder-addictions/genetic-cutting')
         .then(({default: Cutting}) => {
           const fragments = this.fragments();
 

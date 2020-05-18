@@ -25,7 +25,7 @@
     "url": "https://github.com/oknosoft/windowbuilder/issues"
   },
   "homepage": "https://light.oknosoft.ru/",
-  "proxy": "http://localhost:3016/",
+  "proxy": "https://light.oknosoft.ru/",
   "dependencies": {
     "@jscad/openjscad": "^1.6.1",
     "@turf/points-within-polygon": "^5.1.5",
@@ -38,7 +38,7 @@
     "metadata-pouchdb": "2.0.22-beta.7",
     "metadata-react": "2.0.22-beta.7",
     "metadata-redux": "2.0.22-beta.7",
-    "metadata-superlogin": "2.0.22-beta.7",
+    "metadata-superlogin": "^2.0.22-beta.7",
     "paper-jsdom-canvas": "^0.12.4",
     "react-highlight-words": "^0.16.0",
     "windowbuilder": "github:oknosoft/windowbuilder-core#471883a78e25f30c35adfeb6d35ec9f8ba0cab54"
